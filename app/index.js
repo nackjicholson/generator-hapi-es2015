@@ -5,7 +5,7 @@ var _s = require('underscore.string');
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 
-module.exports = yeoman.generators.Base.extend({
+module.exports = yeoman.Base.extend({
   prompting: function () {
     var done = this.async();
 
@@ -65,7 +65,10 @@ module.exports = yeoman.generators.Base.extend({
         interpolate: /<%=([\s\S]+?)%>/g
       });
 
-      this.copy('src/lib/foo.test.js', 'src/lib/foo.test.js');
+      this.copy('src/lib/foo.js', 'src/lib/foo.js');
+    },
+    testFiles: function() {
+      this.directory('test', 'test');
     },
     configFiles: function() {
       this.copy('dockerignore', '.dockerignore');

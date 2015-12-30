@@ -48,9 +48,9 @@ a [`jscs`](http://jscs.info/) code style specification. Uses the "airbnb" jscs p
 
 Runs a test of your `src` code using mocha. Tests can be written using es2015 as well.
 
-`$ npm run coverage`
+`$ npm run cov`
 
-Not implemented.
+Produces an istanbul coverage report in the `coverage/` directory.
 
 **Dev Mode**
 
@@ -78,4 +78,5 @@ Starts the es5 server
 
 `$ npm start:dev`
 
-Not implemented.
+Starts a `nodemon` file watcher on the `src/server.js` script. Anytime a file is changed in the project, the server
+will automatically restart itself.

@@ -1,5 +1,5 @@
 import assert from 'assert';
-const foo = () => 'bar';
+import foo from '../src/lib/foo';
 
 describe('lib/foo', () => {
   it('should return bar', () => {

@@ -22,8 +22,10 @@
     "babel-register": "^6.3.13",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.1.1",
+    "isparta": "^4.0.0",
     "jscs": "^2.7.0",
     "mocha": "^2.3.4",
+    "nodemon": "^1.8.1",
     "watch": "^0.17.1"
   },
   "dependencies": {
@@ -37,11 +39,13 @@
     "vision": "^4.0.1"
   },
   "scripts": {
+    "cov": "babel-node node_modules/.bin/isparta cover --report text --report html _mocha -- --reporter list",
     "lint": "eslint src && jscs src",
     "start": "node es5/server.js",
-    "test": "mocha --compilers js:babel-register --reporter list src/**/*.test.js",
-    "tdd": "watch 'clear && npm run -s test' src",
-    "tdd:lint": "watch 'clear && npm run -s lint && npm run -s test' src",
+    "start:dev": "nodemon --exec babel-node src/server.js",
+    "test": "mocha --compilers js:babel-register --reporter list",
+    "tdd": "watch 'clear && npm run -s test' src test",
+    "tdd:lint": "watch 'clear && npm run -s lint && npm run -s test' src test",
     "build": "babel src --out-dir es5"
   },
   "eslintConfig": {
@@ -60,9 +64,6 @@
     "requireTrailingComma": null
   },
   "babel": {
-    "only": [
-      "src"
-    ],
     "presets": [
       "es2015"
     ]

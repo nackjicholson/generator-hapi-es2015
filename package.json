@@ -23,16 +23,15 @@
     "boilerplate",
     "template",
     "scaffold",
-    "node",
-    "module",
-    "node_module",
-    "node-module",
     "ECMASCRIPT 6",
     "ES6",
     "ES2015",
     "babel",
     "transpile",
-    "gulp"
+    "hapijs",
+    "hapi",
+    "micro service",
+    "microservices"
   ],
   "dependencies": {
     "chalk": "^1.1.1",
