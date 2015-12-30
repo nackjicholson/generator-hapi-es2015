@@ -30,7 +30,7 @@ By default comes setup with the following plugins:
 
 Also provides a sample route "/foobar" which returns a JSON response `{"foo": "bar"}`.
 
-### Useful Gulp Tasks for Improved ES2015 Development
+### Useful NPM scripts for Improved ES2015 Development
 
 **Linting with Eslint**
 
