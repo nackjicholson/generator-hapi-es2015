@@ -1,0 +1,48 @@
+{
+  "name": "generator-hapi-es2015",
+  "version": "0.0.0",
+  "description": "Scaffold a hapijs micro service",
+  "license": "MIT",
+  "repository": "nackjicholson/generator-hapi-es2015",
+  "author": {
+    "name": "Will Vaughn",
+    "email": "willieviseoae@gmail.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "plugin",
+    "boilerplate",
+    "template",
+    "scaffold",
+    "node",
+    "module",
+    "node_module",
+    "node-module",
+    "ECMASCRIPT 6",
+    "ES6",
+    "ES2015",
+    "babel",
+    "transpile",
+    "gulp"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "superb": "^1.2.0",
+    "underscore.string": "^3.2.2",
+    "yeoman-generator": "^0.22.2",
+    "yosay": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.3.4",
+    "yeoman-assert": "^2.1.1"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "repository": "<%= githubUsername %>/<%= projectName %>",
+  "author": {
+    "name": "<%= name %>",
+    "email": "<%= email %>"
+  },
+  "main": "es5/server.js",
+  "engines": {
+    "node": ">=4"
+  },
+  "bugs": {
+    "url": "https://github.com/<%= githubUsername %>/<%= projectName %>/issues"
+  },
+  "homepage": "https://github.com/<%= githubUsername %>/<%= projectName %>#readme",
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-core": "^6.3.26",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.1.1",
+    "jscs": "^2.7.0",
+    "mocha": "^2.3.4",
+    "watch": "^0.17.1"
+  },
+  "dependencies": {
+    "good": "^6.4.0",
+    "good-console": "^5.2.0",
+    "hapi": "^11.1.4",
+    "hapi-pkg": "^1.1.0",
+    "hapi-swaggered": "^2.4.1",
+    "hapi-swaggered-ui": "^2.1.1",
+    "inert": "^3.2.0",
+    "vision": "^4.0.1"
+  },
+  "scripts": {
+    "lint": "eslint src && jscs src",
+    "start": "node es5/server.js",
+    "test": "mocha --compilers js:babel-register --reporter list src/**/*.test.js",
+    "tdd": "watch 'clear && npm run -s test' src",
+    "tdd:lint": "watch 'clear && npm run -s lint && npm run -s test' src",
+    "build": "babel src --out-dir es5"
+  },
+  "eslintConfig": {
+    "extends": "airbnb/base",
+    "env": {
+      "mocha": true
+    },
+    "rules": {
+      "comma-dangle": 0
+    }
+  },
+  "jscsConfig": {
+    "preset": "airbnb",
+    "esnext": true,
+    "requireCurlyBraces": null,
+    "requireTrailingComma": null
+  },
+  "babel": {
+    "only": [
+      "src"
+    ],
+    "presets": [
+      "es2015"
+    ]
+  }
+}
